@@ -49,7 +49,7 @@
         <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="21,293,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Promo" HorizontalAlignment="Left" Margin="21,390,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Promo Awal tahun" HorizontalAlignment="Left" Margin="21,415,0,0" VerticalAlignment="Top"/>
-        <Button Content="Ganti" HorizontalAlignment="Left" Height="25" Margin="223,416,0,0" VerticalAlignment="Top" Width="85"/>
+        <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="25" Margin="223,416,0,0" VerticalAlignment="Top" Width="85" Click="onBtnGantiPromoClicked"/>
         <Label Content="OVO RP 300.000" HorizontalAlignment="Left" Margin="26,325,0,0" VerticalAlignment="Top"/>
         <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="223,326,0,0" VerticalAlignment="Top" Width="85"/>
         <Separator HorizontalAlignment="Left" Height="3" Margin="380,151,0,0" VerticalAlignment="Top" Width="361"/>

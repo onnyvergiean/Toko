@@ -67,5 +67,10 @@ namespace Toko
                 controller.removeItem(item);
             }
         }
+
+        private void onBtnGantiPromoClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
