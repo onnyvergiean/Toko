@@ -40,8 +40,6 @@ namespace Toko
         {
             ListBox listbox = sender as ListBox;
             Item item = listbox.SelectedItem as Item;
-            Debug.WriteLine(item.item);
-
             this.listener.OnMenuSelected(item);
         }
 
