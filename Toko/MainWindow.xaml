@@ -24,8 +24,9 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Margin="380,129,58,398">
-            <Grid>
+        <ListBox HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="362" Margin="380,117,0,0">
+            <Grid Margin="0,2">
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150"/>
                     <ColumnDefinition Width="150"/>
@@ -51,6 +52,7 @@
         <Button Content="Ganti" HorizontalAlignment="Left" Height="25" Margin="223,429,0,0" VerticalAlignment="Top" Width="85"/>
         <Label Content="OVO RP 300.000" HorizontalAlignment="Left" Margin="21,351,0,0" VerticalAlignment="Top"/>
         <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="223,352,0,0" VerticalAlignment="Top" Width="85"/>
+        <Separator HorizontalAlignment="Left" Height="3" Margin="380,151,0,0" VerticalAlignment="Top" Width="361"/>
 
 
     </Grid>
