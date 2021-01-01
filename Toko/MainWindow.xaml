@@ -10,16 +10,16 @@
         <Label Content="Toko Jihyo" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
         <Label Content="Keranjang Belanja" HorizontalAlignment="Left" Margin="373,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,-0.384" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="419" Margin="365,60,0,0" Stroke="Black" VerticalAlignment="Top" Width="391"/>
-        <ListBox HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="362" Margin="380,159,0,0">
+        <ListBox x:Name="listKeranjangBelanja" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="362" Margin="380,159,0,0" MouseDoubleClick="onlistKeranjangBelanjaDoubleClicked">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="150" />
-                            <RowDefinition Height="150" />
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Text="{Binding title}" TextAlignment="Left" />
-                        <TextBlock Grid.Row="1" Text="{Binding price}"  TextAlignment="Right" />
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="281" />
+                            <ColumnDefinition Width="81" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Text="{Binding item}" TextAlignment="Left" FontSize="16"/>
+                        <TextBlock Grid.Row="1" Text="{Binding price}"  TextAlignment="Right" FontSize="16"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -31,7 +31,7 @@
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="Item" TextAlignment="Center"/>
-                <TextBlock Grid.Column="1" Text="Price" TextAlignment="Center" Margin="45,0,-45,0"/>
+                <TextBlock Grid.Column="1" Text="Price" TextAlignment="Center"/>
 
             </Grid>
         </ListBox>
@@ -44,7 +44,7 @@
         <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="323"/>
         <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,274,0,0" Stroke="Black" VerticalAlignment="Top" Width="323"/>
         <Label Content="Daftar Menu" HorizontalAlignment="Left" Margin="21,86,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="32,142,0,0" VerticalAlignment="Top" Width="276"/>
+        <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="32,142,0,0" VerticalAlignment="Top" Width="276" Click="onDaftarMenuClicked"/>
         <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="21,293,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Promo" HorizontalAlignment="Left" Margin="21,416,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Promo Awal tahun" HorizontalAlignment="Left" Margin="21,434,0,0" VerticalAlignment="Top"/>
