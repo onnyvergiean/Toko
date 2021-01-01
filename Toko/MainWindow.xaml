@@ -47,11 +47,11 @@
         <Label Content="Daftar Menu" HorizontalAlignment="Left" Margin="21,86,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="32,142,0,0" VerticalAlignment="Top" Width="276" Click="onDaftarMenuClicked"/>
         <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="21,293,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Promo" HorizontalAlignment="Left" Margin="21,416,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Promo Awal tahun" HorizontalAlignment="Left" Margin="21,434,0,0" VerticalAlignment="Top"/>
-        <Button Content="Ganti" HorizontalAlignment="Left" Height="25" Margin="223,429,0,0" VerticalAlignment="Top" Width="85"/>
-        <Label Content="OVO RP 300.000" HorizontalAlignment="Left" Margin="21,351,0,0" VerticalAlignment="Top"/>
-        <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="223,352,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="21,390,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Promo Awal tahun" HorizontalAlignment="Left" Margin="21,415,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ganti" HorizontalAlignment="Left" Height="25" Margin="223,416,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="OVO RP 300.000" HorizontalAlignment="Left" Margin="26,325,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="223,326,0,0" VerticalAlignment="Top" Width="85"/>
         <Separator HorizontalAlignment="Left" Height="3" Margin="380,151,0,0" VerticalAlignment="Top" Width="361"/>
 
 
