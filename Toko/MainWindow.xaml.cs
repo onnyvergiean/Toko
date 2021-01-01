@@ -70,6 +70,7 @@ namespace Toko
 
         private void onBtnGantiPromoClicked(object sender, RoutedEventArgs e)
         {
+            Promo promo = new Promo();
 
         }
     }

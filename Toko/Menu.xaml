@@ -6,13 +6,7 @@
         xmlns:local="clr-namespace:Toko"
         mc:Ignorable="d"
         Title="Menu" Height="450" Width="346">
-    <Grid Margin="0,0,26,0">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <Grid HorizontalAlignment="Left" Width="320">
         <ListBox x:Name="listMenu" Margin="32,48,0,48" MouseDoubleClick="listMenuOnDoubleClicked">
             <ListBox.ItemTemplate>
                 <DataTemplate>
