@@ -21,5 +21,15 @@ namespace Toko
         {
             InitializeComponent();
         }
+
+        private void onlistBoxDaftarMenuClicked(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void generateContentPromo()
+        {
+
+        }
     }
 }

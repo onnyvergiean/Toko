@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Promo" Height="450" Width="358">
     <Grid HorizontalAlignment="Left" Width="320">
-        <ListBox Margin="32,48,0,48">
+        <ListBox x:Name="listBoxDaftarMenu" Margin="32,48,0,48" MouseDoubleClick="onlistBoxDaftarMenuClicked">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
