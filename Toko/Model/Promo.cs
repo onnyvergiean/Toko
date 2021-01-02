@@ -8,12 +8,11 @@ namespace Toko.Model
     public class Promo
     {
         public string promo { get; set; }
-        public double diskon { get; set; }
 
-        public Promo(string promo, double diskon)
+        public Promo(string promo)
         {
             this.promo = promo;
-            this.diskon = diskon;
+           
         }
     }
 }
