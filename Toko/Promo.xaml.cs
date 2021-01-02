@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Toko.Controller;
+using Toko.Model;
 
 namespace Toko
 {
@@ -17,9 +19,11 @@ namespace Toko
     /// </summary>
     public partial class Promo : Window
     {
+        PromoController promoController;
         public Promo()
         {
             InitializeComponent();
+            promoController = new PromoController();
         }
 
         private void onlistBoxDaftarMenuClicked(object sender, MouseButtonEventArgs e)
@@ -29,7 +33,12 @@ namespace Toko
 
         private void generateContentPromo()
         {
-
+            Diskon diskon1 = new Diskon("Promo Natal");
         }
+    }
+
+    public interface OnPromoChangedListener
+    {
+        void OnPromoSelected(Diskon diskon);
     }
 }

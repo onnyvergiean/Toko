@@ -5,13 +5,13 @@ using System.Text;
 
 namespace Toko.Model
 {
-    public class Promo
+    public class Diskon
     {
-        public string promo { get; set; }
+        public string diskon { get; set; }
 
-        public Promo(string promo)
+        public Diskon(string diskon)
         {
-            this.promo = promo;
+            this.diskon = diskon;
            
         }
     }

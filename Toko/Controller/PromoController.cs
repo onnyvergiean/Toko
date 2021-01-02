@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Toko.Model;
 
 namespace Toko.Controller
 {
     class PromoController
     {
-        private List<Promo> promo;
+        private List<Diskon> diskon;
 
         public PromoController()
         {
-            promo = new List<Promo>();
+            diskon = new List<Diskon>();
         }
 
-        public void addPromo(Promo promo)
+        public void addPromo(Diskon diskon)
         {
-            this.promo.Add(promo);
+            this.diskon.Add(diskon);
         }
 
-        public List<Promo> getPromo()
+        public List<Diskon> getDiskon()
         {
-            return this.promo;
+            return this.diskon;
         }
     }
 }

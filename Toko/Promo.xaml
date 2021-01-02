@@ -15,7 +15,7 @@
                             <ColumnDefinition Width="200" />
                         
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Row="0" Text="{Binding promo}" TextAlignment="Left" FontSize="16"/>
+                        <TextBlock Grid.Row="0" Text="{Binding diskon}" TextAlignment="Left" FontSize="16"/>
                         
                     </Grid>
                 </DataTemplate>
