@@ -42,17 +42,29 @@
         <Label Content="79.000" HorizontalAlignment="Left" Margin="697,374,0,0" VerticalAlignment="Top"/>
         <Label Content="9.000" HorizontalAlignment="Left" Margin="703,407,0,0" VerticalAlignment="Top"/>
         <Label Content="69.000" HorizontalAlignment="Left" Margin="697,436,0,0" VerticalAlignment="Top"/>
-        <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="323"/>
-        <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,274,0,0" Stroke="Black" VerticalAlignment="Top" Width="323"/>
+        <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="341"/>
+        <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,274,0,0" Stroke="Black" VerticalAlignment="Top" Width="341"/>
         <Label Content="Daftar Menu" HorizontalAlignment="Left" Margin="21,86,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="32,142,0,0" VerticalAlignment="Top" Width="276" Click="onDaftarMenuClicked"/>
         <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="21,293,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Promo" HorizontalAlignment="Left" Margin="21,390,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Promo Awal tahun" HorizontalAlignment="Left" Margin="21,415,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="25" Margin="223,416,0,0" VerticalAlignment="Top" Width="85" Click="onBtnGantiPromoClicked"/>
-        <Label Content="OVO RP 300.000" HorizontalAlignment="Left" Margin="26,325,0,0" VerticalAlignment="Top"/>
-        <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="223,326,0,0" VerticalAlignment="Top" Width="85"/>
+        <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="256,421,0,0" VerticalAlignment="Top" Width="85" Click="onBtnGantiPromoClicked"/>
+        <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="256,324,0,0" VerticalAlignment="Top" Width="85"/>
         <Separator HorizontalAlignment="Left" Height="3" Margin="380,151,0,0" VerticalAlignment="Top" Width="361"/>
+        <ListBox x:Name="listBoxPromo" HorizontalAlignment="Left" Height="24" Margin="21,421,0,0" VerticalAlignment="Top" Width="230">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="161" />
+
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Text="{Binding diskon}" TextAlignment="Left"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="lsitBoxMetodePembayaran" HorizontalAlignment="Left" Height="24" Margin="21,324,0,0" VerticalAlignment="Top" Width="230"/>
 
 
     </Grid>

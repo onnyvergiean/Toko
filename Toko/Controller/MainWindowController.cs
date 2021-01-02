@@ -10,6 +10,7 @@ namespace Toko.Controller
     {
         KeranjangBelanja keranjangBelanja;
 
+
         public MainWindowController(KeranjangBelanja keranjangBelanja)
         {
             this.keranjangBelanja = keranjangBelanja;
@@ -29,5 +30,18 @@ namespace Toko.Controller
         {
             return this.keranjangBelanja.getItems();
         }
+
+        public void addDiskon(Diskon diskon)
+        {
+            
+            this.keranjangBelanja.addDiskon(diskon);
+        }
+
+        public List<Diskon> getDiskon()
+        {
+            return this.keranjangBelanja.getDiskon();
+        }
+
+
     }
 }

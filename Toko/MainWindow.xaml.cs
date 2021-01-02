@@ -22,7 +22,8 @@ namespace Toko
     /// </summary>
     public partial class MainWindow : Window,
         OnMenuChangedListener,
-        onKeranjangBelanjaChangedListener
+        onKeranjangBelanjaChangedListener,
+        OnPromoChangedListener
     {
         MainWindowController controller;
 
@@ -33,6 +34,8 @@ namespace Toko
             controller = new MainWindowController(keranjangBelanja);
 
             listKeranjangBelanja.ItemsSource = controller.getItems();
+            listBoxPromo.ItemsSource = controller.getDiskon();
+
         }
 
         public void addItemSucceed()
@@ -49,6 +52,13 @@ namespace Toko
         {
             listKeranjangBelanja.Items.Refresh();
         }
+
+        public void addPromoSucceed()
+        {
+            listBoxPromo.Items.Refresh();
+        }
+      
+       
 
         private void onDaftarMenuClicked(object sender, RoutedEventArgs e)
         {
@@ -71,8 +81,15 @@ namespace Toko
         private void onBtnGantiPromoClicked(object sender, RoutedEventArgs e)
         {
             Promo promo = new Promo();
+            promo.SetOnPromoSelectedListener(this);
+            promo.Show();
 
 
+        }
+
+        public void OnPromoSelected(Diskon diskon)
+        {
+            controller.addDiskon(diskon);
         }
     }
 }
