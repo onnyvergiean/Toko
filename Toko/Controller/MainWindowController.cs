@@ -9,11 +9,13 @@ namespace Toko.Controller
     class MainWindowController
     {
         KeranjangBelanja keranjangBelanja;
+        Payment payment;
 
 
-        public MainWindowController(KeranjangBelanja keranjangBelanja)
+        public MainWindowController(KeranjangBelanja keranjangBelanja, Payment payment)
         {
             this.keranjangBelanja = keranjangBelanja;
+            this.payment = payment;
         }
 
         public void addItem(Item item)
@@ -34,12 +36,12 @@ namespace Toko.Controller
         public void addDiskon(Diskon diskon)
         {
             
-            this.keranjangBelanja.addDiskon(diskon);
+            this.payment.addDiskon(diskon);
         }
 
         public List<Diskon> getDiskon()
         {
-            return this.keranjangBelanja.getDiskon();
+            return this.payment.getDiskon();
         }
 
 

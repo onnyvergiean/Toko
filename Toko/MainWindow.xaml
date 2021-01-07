@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Toko"
         mc:Ignorable="d"
-        Title="MainWindow" Height="561" Width="800">
-    <Grid Margin="0,0,0,-6" HorizontalAlignment="Left" Width="800">
+        Title="MainWindow" Height="561" Width="1168">
+    <Grid Margin="0,0,0,-6" HorizontalAlignment="Center" Width="1168">
         <Label Content="Toko Jihyo" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
         <Label Content="Keranjang Belanja" HorizontalAlignment="Left" Margin="373,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,-0.384" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="419" Margin="365,60,0,0" Stroke="Black" VerticalAlignment="Top" Width="391"/>
@@ -39,32 +39,35 @@
         <Label Content="SubTotal" HorizontalAlignment="Left" Margin="380,374,0,0" VerticalAlignment="Top"/>
         <Label Content="Promo" HorizontalAlignment="Left" Margin="380,407,0,0" VerticalAlignment="Top"/>
         <Label Content="Total" HorizontalAlignment="Center" Margin="0,441,0,0" VerticalAlignment="Top" Width="40"/>
-        <Label Content="79.000" HorizontalAlignment="Left" Margin="697,374,0,0" VerticalAlignment="Top"/>
-        <Label Content="9.000" HorizontalAlignment="Left" Margin="703,407,0,0" VerticalAlignment="Top"/>
-        <Label Content="69.000" HorizontalAlignment="Left" Margin="697,436,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelSubTotal" Content="79.000" HorizontalAlignment="Left" Margin="697,374,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelPromo" Content="9.000" HorizontalAlignment="Left" Margin="703,407,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelTotal" Content="69.000" HorizontalAlignment="Left" Margin="697,436,0,0" VerticalAlignment="Top"/>
         <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="341"/>
-        <Rectangle HorizontalAlignment="Left" Height="205" Margin="10,274,0,0" Stroke="Black" VerticalAlignment="Top" Width="341"/>
+        <Rectangle HorizontalAlignment="Left" Height="205" Margin="776,66,0,0" Stroke="Black" VerticalAlignment="Top" Width="370"/>
         <Label Content="Daftar Menu" HorizontalAlignment="Left" Margin="21,86,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="32,142,0,0" VerticalAlignment="Top" Width="276" Click="onDaftarMenuClicked"/>
-        <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="21,293,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Promo" HorizontalAlignment="Left" Margin="21,390,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="256,421,0,0" VerticalAlignment="Top" Width="85" Click="onBtnGantiPromoClicked"/>
-        <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="256,324,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="787,85,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="787,182,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="28" Margin="1054,220,0,0" VerticalAlignment="Top" Width="84" Click="onBtnGantiPromoClicked"/>
+        <Button Content="Ganti" HorizontalAlignment="Left" Height="24" Margin="1022,116,0,0" VerticalAlignment="Top" Width="85"/>
         <Separator HorizontalAlignment="Left" Height="3" Margin="380,151,0,0" VerticalAlignment="Top" Width="361"/>
-        <ListBox x:Name="listBoxPromo" HorizontalAlignment="Left" Height="24" Margin="21,421,0,0" VerticalAlignment="Top" Width="230">
+        <ListBox x:Name="listPromo" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="262" Margin="787,220,0,0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="161" />
+                            <ColumnDefinition Width="200" />
 
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Text="{Binding diskon}" TextAlignment="Left"/>
+
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox x:Name="lsitBoxMetodePembayaran" HorizontalAlignment="Left" Height="24" Margin="21,324,0,0" VerticalAlignment="Top" Width="230"/>
+        <Label x:Name="labelContentMetodePembayaran" Content="OVO" HorizontalAlignment="Left" Margin="790,114,0,0" VerticalAlignment="Top"/>
+
+
 
 
     </Grid>

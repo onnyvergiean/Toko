@@ -7,24 +7,23 @@ namespace Toko.Model
     class KeranjangBelanja
     {
         List<Item> itemkeranjangBelanja;
-        public List<Diskon> diskonDipakai;
+        Payment payment;
         onKeranjangBelanjaChangedListener onKeranjangBelanjaChangedListener;
 
-        public KeranjangBelanja(onKeranjangBelanjaChangedListener onKeranjangBelanjaChangedListener)
+        public KeranjangBelanja(Payment payment,onKeranjangBelanjaChangedListener onKeranjangBelanjaChangedListener)
         {
+            this.payment = payment;
             this.onKeranjangBelanjaChangedListener = onKeranjangBelanjaChangedListener;
             this.itemkeranjangBelanja = new List<Item>();
-            this.diskonDipakai = new List<Diskon>();
+            
+            
         }
         public List<Item> getItems()
         {
             return this.itemkeranjangBelanja;
         }
 
-        public List<Diskon> getDiskon()
-        {
-            return this.diskonDipakai;
-        }
+       
 
         public void addItem(Item item)
         {
@@ -42,19 +41,16 @@ namespace Toko.Model
 
         private void calculateSubTotal()
         {
+            
             double subTotal = 0;
             foreach(Item item in itemkeranjangBelanja)
             {
                 subTotal += item.price;
             }
+            
         }
 
-        public void addDiskon(Diskon diskon)
-        {
-            this.diskonDipakai.Clear();
-            this.diskonDipakai.Add(diskon);
-            this.onKeranjangBelanjaChangedListener.addPromoSucceed();
-        }
+        
     }
 
    
@@ -64,6 +60,6 @@ namespace Toko.Model
         void removeItemSucceed();
         void addItemSucceed();
 
-        void addPromoSucceed();
+        
     }
 }

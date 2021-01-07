@@ -13,8 +13,9 @@ namespace Toko.Model
         public Diskon(string diskon, double potongan)
         {
             this.diskon = diskon;
-            this.potongan = potongan;
-           
+            this.potongan = potongan;  
         }
+
+
     }
 }

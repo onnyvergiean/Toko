@@ -23,21 +23,33 @@ namespace Toko
     public partial class MainWindow : Window,
         OnMenuChangedListener,
         onKeranjangBelanjaChangedListener,
-        OnPromoChangedListener
+        OnPromoChangedListener,
+        OnPaymentChangedListener
     {
         MainWindowController controller;
-
+        Payment payment;
+        Diskon diskon;
+        PromoController promoController;
         public MainWindow()
         {
             InitializeComponent();
-            KeranjangBelanja keranjangBelanja = new KeranjangBelanja(this);
-            controller = new MainWindowController(keranjangBelanja);
+            payment = new Payment(this);
+            payment.setBalance(500000);
+            KeranjangBelanja keranjangBelanja = new KeranjangBelanja(payment, this);
+            promoController = new PromoController();
+            controller = new MainWindowController(keranjangBelanja, payment);
 
             listKeranjangBelanja.ItemsSource = controller.getItems();
-            listBoxPromo.ItemsSource = controller.getDiskon();
+            listPromo.ItemsSource = controller.getDiskon();
+
+            initializeView();
+
+
 
         }
 
+       
+       
         public void addItemSucceed()
         {
             listKeranjangBelanja.Items.Refresh();
@@ -55,7 +67,7 @@ namespace Toko
 
         public void addPromoSucceed()
         {
-            listBoxPromo.Items.Refresh();
+            listPromo.Items.Refresh();
         }
       
        
@@ -90,6 +102,18 @@ namespace Toko
         public void OnPromoSelected(Diskon diskon)
         {
             controller.addDiskon(diskon);
+        }
+
+        private void initializeView()
+        {
+            labelSubTotal.Content = 0;
+            labelTotal.Content = 0;
+        }
+
+        public void onPriceUpdated(double subtotal, double total, double balance)
+        {
+            labelSubTotal.Content = subtotal;
+            labelTotal.Content = total;
         }
     }
 }
