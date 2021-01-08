@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Toko.Model
@@ -14,6 +15,8 @@ namespace Toko.Model
             
             this.paymentListener = paymentListener;
             this.diskonDipakai = new List<Diskon>();
+
+            
 
         }
         public List<Diskon> getDiskon()
@@ -31,41 +34,56 @@ namespace Toko.Model
             return this.balance;
         }
     
-        public void updateTotal(Diskon diskon,double subTotal)
-        {
-            double total = 0;
-            if(diskon.potongan == 0.25)
-            {
-                total = (100 - 25) * subTotal / 100;
-            }else if (diskon.potongan == 30000)
-            {
-                if(total <= 30000)
-                {
-                    total = (100 - 30) * subTotal / 100;
-                }
-                else
-                {
-                    total = subTotal - 30000;
-                }
-            }else if (diskon.potongan == 10000)
-            {
-                total = subTotal - 10000;
-            }
-            this.balance = this.balance - total;
-            this.paymentListener.onPriceUpdated(subTotal, total, balance);
-        }
+        
+
         public void addDiskon(Diskon diskon)
         {
             this.diskonDipakai.Clear();
             this.diskonDipakai.Add(diskon);
             this.paymentListener.addPromoSucceed();
         }
-        
+
+       
+
+        public void updateTotal(double subTotal)
+        {
+            double promo = 0;
+
+            foreach (Diskon diskon in diskonDipakai)
+            {
+                if (diskon.potongan == 10000)
+                {
+                    promo = 10000;
+                }
+                else if (diskon.potongan == 30000)
+                {
+                   if(subTotal < 30000)
+                    {
+                        promo = (subTotal * 30 / 100);
+                    }
+                    else
+                    {
+                        promo = 30000;
+                    }
+                }
+                else if (diskon.potongan == 25000)
+                {
+                    promo = (subTotal * 25 / 100);
+                    
+                }
+                
+            }
+
+            double total = subTotal - promo;
+            this.balance = this.balance - total;
+            this.paymentListener.onPriceUpdated(subTotal, total);
+            
+        }
     }
 
     interface OnPaymentChangedListener
     {
-        void onPriceUpdated(double subtTotal, double total, double balance);
+        void onPriceUpdated(double subtTotal, double total);
 
         void addPromoSucceed();
     }

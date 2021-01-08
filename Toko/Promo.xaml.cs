@@ -37,7 +37,7 @@ namespace Toko
 
         private void generateContentPromo()
         {
-            Diskon diskon1 = new Diskon("Promo Awal tahun Diskon 25 % ", 0.25);
+            Diskon diskon1 = new Diskon("Promo Awal tahun Diskon 25 % ", 25000);
             Diskon diskon2 = new Diskon("Promo Tebus Murah Diskon 30 % atau maksimal 30.000", 30000);
             Diskon diskon3 = new Diskon("Promo Natal Potongan 10000", 10000);
 

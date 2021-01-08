@@ -15,8 +15,9 @@ namespace Toko.Model
             this.payment = payment;
             this.onKeranjangBelanjaChangedListener = onKeranjangBelanjaChangedListener;
             this.itemkeranjangBelanja = new List<Item>();
-            
-            
+
+
+
         }
         public List<Item> getItems()
         {
@@ -41,16 +42,17 @@ namespace Toko.Model
 
         private void calculateSubTotal()
         {
-            
             double subTotal = 0;
-            foreach(Item item in itemkeranjangBelanja)
+            
+            foreach (Item item in itemkeranjangBelanja)
             {
                 subTotal += item.price;
+                
             }
-            
+            payment.updateTotal(subTotal);
         }
 
-        
+
     }
 
    

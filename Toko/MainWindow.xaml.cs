@@ -28,15 +28,11 @@ namespace Toko
     {
         MainWindowController controller;
         Payment payment;
-        Diskon diskon;
-        PromoController promoController;
         public MainWindow()
         {
             InitializeComponent();
             payment = new Payment(this);
-            payment.setBalance(500000);
             KeranjangBelanja keranjangBelanja = new KeranjangBelanja(payment, this);
-            promoController = new PromoController();
             controller = new MainWindowController(keranjangBelanja, payment);
 
             listKeranjangBelanja.ItemsSource = controller.getItems();
@@ -48,8 +44,17 @@ namespace Toko
 
         }
 
-       
-       
+        public void onPriceUpdated(double subTotal, double total)
+        {
+            labelSubTotal.Content = subTotal;
+           
+           
+                labelPromo.Content = total - subTotal;
+            
+            labelTotal.Content = total;
+        }
+
+
         public void addItemSucceed()
         {
             listKeranjangBelanja.Items.Refresh();
@@ -107,6 +112,7 @@ namespace Toko
         private void initializeView()
         {
             labelSubTotal.Content = 0;
+            labelPromo.Content = 0;
             labelTotal.Content = 0;
         }
 

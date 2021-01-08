@@ -7,7 +7,7 @@ namespace Toko.Controller
 {
     class PromoController
     {
-        private List<Diskon> diskon;
+        public List<Diskon> diskon;
 
         public PromoController()
         {
