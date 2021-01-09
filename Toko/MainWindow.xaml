@@ -8,7 +8,7 @@
         Title="MainWindow" Height="561" Width="1045">
     <Grid Margin="0,0,0,-6" HorizontalAlignment="Right" Width="1035">
         <Label Content="Toko Twice 2731" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
-        <Label Content="Keranjang Belanja" HorizontalAlignment="Left" Margin="603,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,-0.384" FontWeight="Bold"/>
+        <Label Content="Keranjang Belanja" HorizontalAlignment="Left" Margin="603,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,-0.384" FontWeight="Bold" FontSize="20"/>
         <Rectangle HorizontalAlignment="Left" Height="419" Margin="595,73,0,0" Stroke="Black" VerticalAlignment="Top" Width="391"/>
         <ListBox x:Name="listKeranjangBelanja" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="362" Margin="610,172,0,0" MouseDoubleClick="onlistKeranjangBelanjaDoubleClicked">
             <ListBox.ItemTemplate>
@@ -44,12 +44,12 @@
         <Label x:Name="labelTotal" Content="69.000" HorizontalAlignment="Left" Margin="927,449,0,0" VerticalAlignment="Top"/>
         <Rectangle HorizontalAlignment="Left" Height="204" Margin="98,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="420"/>
         <Rectangle HorizontalAlignment="Left" Height="197" Margin="98,295,0,0" Stroke="Black" VerticalAlignment="Top" Width="420"/>
-        <Label Content="Daftar Menu" HorizontalAlignment="Left" Margin="112,86,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.87,0.695"/>
+        <Label Content="Daftar Menu" HorizontalAlignment="Left" Margin="112,86,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.87,0.695" FontSize="16"/>
         <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="112,149,0,0" VerticalAlignment="Top" Width="390" Click="onDaftarMenuClicked"/>
-        <Label Content="Promo" HorizontalAlignment="Left" Margin="105,295,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="28" Margin="112,384,0,0" VerticalAlignment="Top" Width="390" Click="onBtnGantiPromoClicked"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="112,305,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="28" Margin="112,398,0,0" VerticalAlignment="Top" Width="390" Click="onBtnGantiPromoClicked"/>
         <Separator HorizontalAlignment="Left" Height="3" Margin="610,164,0,0" VerticalAlignment="Top" Width="361"/>
-        <ListBox x:Name="listPromo" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="390" Margin="112,341,0,0">
+        <ListBox x:Name="listPromo" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="390" Margin="112,355,0,0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
