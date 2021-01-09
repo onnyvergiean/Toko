@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="561" Width="1045">
     <Grid Margin="0,0,0,-6" HorizontalAlignment="Right" Width="1035">
-        <Label Content="Toko Jihyo" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
+        <Label Content="Toko Twice 2731" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
         <Label Content="Keranjang Belanja" HorizontalAlignment="Left" Margin="603,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,-0.384" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="419" Margin="595,73,0,0" Stroke="Black" VerticalAlignment="Top" Width="391"/>
         <ListBox x:Name="listKeranjangBelanja" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="362" Margin="610,172,0,0" MouseDoubleClick="onlistKeranjangBelanjaDoubleClicked">
