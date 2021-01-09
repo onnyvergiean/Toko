@@ -41,6 +41,8 @@ namespace Toko
             ListBox listbox = sender as ListBox;
             Item item = listbox.SelectedItem as Item;
             this.listener.OnMenuSelected(item);
+
+            
         }
 
         private void generateContentMenu()

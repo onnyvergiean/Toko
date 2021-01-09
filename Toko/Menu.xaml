@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Toko"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="346">
-    <Grid HorizontalAlignment="Left" Width="320">
-        <ListBox x:Name="listMenu" Margin="32,48,0,48" MouseDoubleClick="listMenuOnDoubleClicked">
+        Title="Menu" Height="450" Width="378">
+    <Grid HorizontalAlignment="Left" Width="415">
+        <ListBox x:Name="listMenu" Margin="32,48,0,48" MouseDoubleClick="listMenuOnDoubleClicked" HorizontalAlignment="Left" Width="313">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="200" />
-                            <ColumnDefinition Width="70" />
+                           
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Text="{Binding item}" TextAlignment="Left" FontSize="16"/>
                         <TextBlock Grid.Row="1" Text="{Binding price}"  TextAlignment="Right" FontSize="16"/>
