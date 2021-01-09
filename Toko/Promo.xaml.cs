@@ -53,6 +53,7 @@ namespace Toko
             ListBox listbox = sender as ListBox;
             Diskon diskon = listbox.SelectedItem as Diskon;
             this.promoListener.OnPromoSelected(diskon);
+            this.Close();
         }
     }
 
