@@ -57,14 +57,18 @@ namespace Toko.Model
                 }
                 else if (diskon.potongan == 30000)
                 {
-                   if(subTotal < 30000)
-                    {
-                        promo = (subTotal * 30 / 100);
-                    }
-                    else
+                   
+                    promo = (subTotal * 30 / 100);
+
+                    if(promo > 30000)
                     {
                         promo = 30000;
                     }
+                    else
+                    {
+                        promo = (subTotal * 30 / 100);
+                    }
+                   
                 }
                 else if (diskon.potongan == 25000)
                 {
