@@ -44,9 +44,9 @@ namespace Toko
 
         public void onPriceUpdated(double subTotal, double total, double promo)
         {
-            labelSubTotal.Content = "Rp" + subTotal;
+            labelSubTotal.Content = "Rp " + subTotal;
             labelPromo.Content = "Rp" +  (total - subTotal);
-            labelTotal.Content = "Rp" + total;
+            labelTotal.Content = "Rp " + total;
         }
 
 
