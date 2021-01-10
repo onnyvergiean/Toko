@@ -7,7 +7,6 @@ namespace Toko.Model
 {
     class Payment
     {
-        private double promo = 0;
         OnPaymentChangedListener paymentListener;
         public Payment(OnPaymentChangedListener paymentListener)
         {
