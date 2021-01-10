@@ -79,7 +79,6 @@ namespace Toko.Model
             }
 
             double total = subTotal - promo;
-            this.balance = this.balance - total;
             this.paymentListener.onPriceUpdated(subTotal, total);
             
         }
