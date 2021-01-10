@@ -40,15 +40,13 @@ namespace Toko
 
             initializeView();
 
-
-
         }
 
-        public void onPriceUpdated(double subTotal, double total)
+        public void onPriceUpdated(double subTotal, double total, double promo)
         {
-            labelSubTotal.Content = subTotal;
-            labelPromo.Content = total - subTotal;
-            labelTotal.Content = total;
+            labelSubTotal.Content = "Rp" + subTotal;
+            labelPromo.Content = "Rp" +  (total - subTotal);
+            labelTotal.Content = "Rp" + total;
         }
 
 
@@ -98,7 +96,6 @@ namespace Toko
             promo.SetOnPromoSelectedListener(this);
             promo.Show();
 
-
         }
 
         public void OnPromoSelected(Diskon diskon)
@@ -111,12 +108,6 @@ namespace Toko
             labelSubTotal.Content = 0;
             labelPromo.Content = 0;
             labelTotal.Content = 0;
-        }
-
-        public void onPriceUpdated(double subtotal, double total, double balance)
-        {
-            labelSubTotal.Content = subtotal;
-            labelTotal.Content = total;
         }
     }
 }
