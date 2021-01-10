@@ -118,5 +118,10 @@ namespace Toko
             labelSubTotal.Content = subtotal;
             labelTotal.Content = total;
         }
+
+        private void onlistPromoDoubleClicked(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

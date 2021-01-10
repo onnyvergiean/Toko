@@ -49,7 +49,7 @@
         <Label Content="Promo" HorizontalAlignment="Left" Margin="112,305,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="28" Margin="112,398,0,0" VerticalAlignment="Top" Width="390" Click="onBtnGantiPromoClicked"/>
         <Separator HorizontalAlignment="Left" Height="3" Margin="610,164,0,0" VerticalAlignment="Top" Width="361"/>
-        <ListBox x:Name="listPromo" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="390" Margin="112,355,0,0">
+        <ListBox x:Name="listPromo" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="390" Margin="112,355,0,0" MouseDoubleClick="onlistPromoDoubleClicked">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
