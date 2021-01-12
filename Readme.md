@@ -1,3 +1,6 @@
+## Onny Vergiean Saputra
+## 19.11.2731
+
 # Study Kasus App
 Aplikasi sederhana toko sesuai studi kasus yang telah diberikan dosen untuk memenuhi tugas UAS. Aplikasi ini berfungsi untuk simulasi pembelian baik makanan minuman dan dapat mengaplikasikan voucher yang tersedia serta customer dapat melihat menu dan promo yang tersedia
 
@@ -81,5 +84,3 @@ Aplikasi sederhana toko sesuai studi kasus yang telah diberikan dosen untuk meme
 ![Class Diagram](Toko/ClassDiagram.png)
 
 
-### Onny Vergiean Saputra
-### 19.11.2731
