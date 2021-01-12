@@ -37,6 +37,10 @@ namespace Toko.Controller
             this.keranjangBelanja.addDiskon(diskon);
         }
 
+        public void removeDiskon(Diskon diskon)
+        {
+            this.keranjangBelanja.removeDiskon(diskon);
+        }
         public List<Diskon> getDiskon()
         {
             return this.keranjangBelanja.getDiskon();

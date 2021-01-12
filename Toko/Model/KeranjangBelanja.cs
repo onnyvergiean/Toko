@@ -36,6 +36,13 @@ namespace Toko.Model
             calculateSubTotal();
         }
 
+        public void removeDiskon(Diskon diskon)
+        {
+            this.diskonDipakai.Remove(diskon);
+            this.onKeranjangBelanjaChangedListener.removeDiskonSucceed();
+            calculateSubTotal();
+        }
+
         public void addItem(Item item)
         {
             this.itemkeranjangBelanja.Add(item);
@@ -99,6 +106,7 @@ namespace Toko.Model
         void addItemSucceed();
 
         void addPromoSucceed();
-        
+        void removeDiskonSucceed();
+
     }
 }
