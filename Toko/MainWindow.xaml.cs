@@ -68,8 +68,14 @@ namespace Toko
         public void addPromoSucceed()
         {
             listPromo.Items.Refresh();
+            listKeranjangBelanja.Items.Refresh();
         }
-      
+       
+        public void removeDiskonSucceed()
+        {
+            listKeranjangBelanja.Items.Refresh();
+            listPromo.Items.Refresh();
+        }
        
 
         private void onDaftarMenuClicked(object sender, RoutedEventArgs e)
@@ -108,6 +114,17 @@ namespace Toko
             labelSubTotal.Content = 0;
             labelPromo.Content = 0;
             labelTotal.Content = 0;
+        }
+
+        private void onlistPromoDoubleClicked(object sender, MouseButtonEventArgs e)
+        {
+            if (MessageBox.Show("Kamu ingin menghapus Promo ini?",
+                  "Konfirmasi", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                ListBox listBox = sender as ListBox;
+                Diskon diskon = listBox.SelectedItem as Diskon;
+                controller.removeDiskon(diskon);
+            }
         }
     }
 }
