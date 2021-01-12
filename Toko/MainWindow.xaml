@@ -44,7 +44,7 @@
         <Label x:Name="labelTotal" Content="69.000" HorizontalAlignment="Left" Margin="897,449,0,0" VerticalAlignment="Top"/>
         <Rectangle HorizontalAlignment="Left" Height="204" Margin="98,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="420"/>
         <Rectangle HorizontalAlignment="Left" Height="197" Margin="98,295,0,0" Stroke="Black" VerticalAlignment="Top" Width="420"/>
-        <Label Content="Daftar Menu" HorizontalAlignment="Left" Margin="112,86,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.87,0.695" FontSize="16"/>
+        <Label Content="Menu" HorizontalAlignment="Left" Margin="112,86,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.87,0.695" FontSize="16"/>
         <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="112,149,0,0" VerticalAlignment="Top" Width="390" Click="onDaftarMenuClicked"/>
         <Label Content="Promo" HorizontalAlignment="Left" Margin="112,305,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <Button x:Name="btnGantiPromo" Content="Ganti" HorizontalAlignment="Left" Height="28" Margin="112,398,0,0" VerticalAlignment="Top" Width="390" Click="onBtnGantiPromoClicked"/>
